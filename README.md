@@ -1,14 +1,19 @@
-# FLASHING-OF-LEDS-WITH-LPC-1768
+# FLASHING-OF-LEDS-WITH-LPC-1768 and Arduino
 
 # AIM: 
-   To interface and toggle the led with ARM LPC 1768 microprocessor           
+   To interface and toggle the led with ARM LPC 1768 microprocessor and Arduino        
            
 # COMPONENTS REQUIRED:
 ##  HARDWARE:
 ARM LPC1768
+
 LED
+
+ARDUINO BOARD
 ## SOFTWARE:
 KEIL MICRO VISION 4.0 IDE
+
+ARDUINO IDE
 
 # PROCEDURE:
 ⮚	Open the Keil software and select the New uvision project from Project Menu as shown below.
@@ -87,13 +92,34 @@ int main()
     }
 }
 ```
+## ARDUINO PROGRAM:
+```
+void setup() {
+  pinMode(LED_BUILTIN, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH);
+  Serial.println("LED ON");
+  delay(1000);
+
+  digitalWrite(LED_BUILTIN, LOW);
+  Serial.println("LED OFF");
+  delay(1000);
+}
+
+```
  
 # Output:
 
-<img width="1280" height="960" alt="LED OP" src="https://github.com/user-attachments/assets/09fc9d14-32c9-4076-8e2e-8cb11fdc082a" />
+<img width="647" height="472" alt="image" src="https://github.com/user-attachments/assets/4fb09954-d4b6-47bd-9f05-33de7ce20c5d" />
+
+## ARDUINO OUTPUT:
+<img width="873" height="131" alt="image" src="https://github.com/user-attachments/assets/3abf0731-6cb3-4cac-82ae-86ff69de4277" />
 
 # Result :
-Thus, a LED is interfaced and toggled with ARM LPC1768 Microprocessor.
+Thus, a LED is interfaced and toggled with ARM LPC1768 Microprocessor and Arduino
 
 
 
